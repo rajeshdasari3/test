@@ -31,14 +31,14 @@
     color: #001F3F;
 }
 
-
+section {
+    padding: 0 min(100px, 10%);
+}
 
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 min(100px, 10%);
-
 }
 
 .row {
@@ -52,30 +52,40 @@
     font-size: 5rem;
 }
 
-.nobr {
-    white-space: nowrap;
+.section-title, h2 {
+    font-size: 3rem;
 }
 
-p {
+.work-name, h3 {
     font-size: 2rem;
+}
+
+.contact-me a, p {
+    font-size: 1.5rem;  
+}
+
+.content > h2.author{
+    margin-bottom: 0;
+}
+
+.nobr {
+    white-space: nowrap;
 }
 
 .row .content {
     place-content: center;
 }
 
-.row > .content > *{
+.content > *{
     margin-bottom: 20px;
     padding-left: 40px;
 }
 
-h2 {
-    font-size: 3rem;
-}
 
 .row .image {
     place-content: center;
 }
+
 
 .row .image img {
     width: 100%;
@@ -83,17 +93,70 @@ h2 {
     object-fit: cover;
 }
 
+.contact-me{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-me > a{
+    text-decoration: none;
+    background-color: #CDE8E5;
+    color: #001F3F;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+
+
+
+/* works section */
+.works{
+    padding-top: min(40px, 8%);
+    padding-bottom: min(40px, 8%);
+}
+
+.works > * {
+    margin-bottom: 20px;
+}
+.works > h2 {
+    text-align: center;
+    margin-bottom: 20px;    
+}
+
+.works-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.works-row .image img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.work-info > *{
+    margin-bottom: 10px;
+}
+
+
 @media (max-width: 992px){
-    .main-title{
+
+    .main-title {
         font-size: 3.5rem;
     }
-
-    h2 {
+    
+    .section-title, h2 {
         font-size: 2.6rem;
     }
-
-    p {
-        font-size: 1.6rem;
+    
+    .work-name, h3 {
+        font-size: 2rem;
+    }
+    
+    .contact-me a, p {
+        font-size: 1rem;  
     }
 
     .row > .content > *{
@@ -111,28 +174,35 @@ h2 {
 
     .row .image {
         display: flex;
-        justify-content: center;
+        justify-content: start;
     }
     .row .image img {
         width: 80%;
     }
     .row > .content > *{
-        /* margin-bottom: 10px; */
         padding-left: 0;
+    }
+
+    .works-row {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
     }
 }
 
 @media (max-width: 576px) {
-
-    .main-title{
-        font-size: 2.5rem;
+    .main-title {
+        font-size: 3rem;
     }
-
-    h2 {
+    
+    .section-title, h2 {
+        font-size: 2rem;
+    }
+    
+    .work-name, h3 {
         font-size: 1.5rem;
     }
-
-    p {
-        font-size: 1rem;
+    
+    .contact-me a, p {
+        font-size: 1rem;  
     }
 }
